@@ -19,9 +19,16 @@ class MainActivity : AppCompatActivity() {
         questionView = findViewById(R.id.questionView)
         answerView = findViewById(R.id.answerView)
 
+        setNewQuestion()
 
     }
 
+    fun setNewQuestion() {
+        val firstNumber = (1..10).random()
+        val secondNumber = (1..10).random()
 
-    
+        questionView.text = "$firstNumber + $secondNumber ="
+
+    }
+
 }
