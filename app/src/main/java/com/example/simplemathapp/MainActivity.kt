@@ -33,6 +33,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        setNewQuestion()
+    }
     fun handleAnswer() {
         val answeredCorrect = checkAnswer()
 

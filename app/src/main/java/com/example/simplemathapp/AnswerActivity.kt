@@ -16,7 +16,7 @@ class AnswerActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.backButton)
 
         button.setOnClickListener{
-            
+            finish()
         }
 
         val answer = intent.getBooleanExtra("answeredCorrect", false)
