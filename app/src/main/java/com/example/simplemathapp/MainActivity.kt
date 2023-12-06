@@ -1,5 +1,6 @@
 package com.example.simplemathapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -36,8 +37,11 @@ class MainActivity : AppCompatActivity() {
         val answeredCorrect = checkAnswer()
 
         Log.d("!!!","Du svarade $answeredCorrect")
+        val intent = Intent(this, AnswerActivity::class.java)
+        intent.putExtra("answeredCorrect", answeredCorrect)
 
-        
+        startActivity(intent)
+
     }
 
     fun checkAnswer() : Boolean {
